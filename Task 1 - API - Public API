@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "9b3a2beb-8ed2-49e7-a638-6fc9432d2020",
+		"name": "Task 1 - API",
+		"description": "1 -- Get - https://dog.ceo/api/breeds/list/all\r\n\r\n\r\n\r\n2 -- Test\r\n      \r\npm.test(\"Verify-retriever is within list\", function () {\r\n    pm.expect(pm.response.text()).to.include(\"african\");\r\n});\r\n\r\n\r\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://dog.ceo/api/breed/retriever/golden/images/random",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "695772d1-4061-4242-949a-aec68b8dd30f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/golden/images/random",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"golden",
+						"images",
+						"random"
+					]
+				},
+				"description": "link for the sub-breed \"golden\""
+			},
+			"response": []
+		},
+		{
+			"name": "https://dog.ceo/api/breed/retriever/list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "29d22f33-2709-4820-850a-09b301981a0c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/list",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"list"
+					]
+				},
+				"description": "sub-breeds for \"retriever\""
+			},
+			"response": []
+		},
+		{
+			"name": "https://dog.ceo/api/breeds/list/all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bb67405-6cc7-450f-b6bd-1a9d429e92db",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.test(\"Verify-retriever is within list\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"african\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				},
+				"description": "1 -- GET  https://dog.ceo/api/breeds/list/all\r\n\r\n2 -- Tests - Using code, verify “retriever” breed is within the list.\r\n      \r\npm.test(\"Verify-retriever is within list\", function () {\r\n    pm.expect(pm.response.text()).to.include(\"african\");\r\n});"
+			},
+			"response": []
+		}
+	]
+}
